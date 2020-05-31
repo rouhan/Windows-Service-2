@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js"></script>
+
+    <p>Web Service Caller</p>
+
+    <script>
+        const http = new XMLHttpRequest();
+
+        http.open("GET", "http://localhost:8080/Values/GetString/")
+        http.send();
+
+        http.onload = () => document.write(http.responseText);
+    </script>
+
+</body>
+</html>
